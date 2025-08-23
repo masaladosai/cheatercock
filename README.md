@@ -46,11 +46,23 @@ Copy your question from the test.
 Paste the question inside the **pre-coded snippet** so the LLM can understand it better.
 
 <p align="center">
-  <img src="ccreadme/5.png" width="400" />
+  <img src="ccreadme/code.png" width="400" />
 </p>
 
 ---
 
-## 7. Save Problem in Backend
+## 7. Copy entire code and press ctrl+lshift+alt+k it will send problem in backend
+## 8. Press ctrl+lshift+alt+p to prompt llm with the question saved in backed...llm will response in 10-20 sec and ur response will be copied in ur clipboard paste it and take important part and use it
+<p align="center">
+  <img src="ccreadme/5.png" width="400" />
+</p>
+
+# Now u can cheat in any coding competition just dont get caught
+<p align="center">
+  <img src="ccreadme/6.png" width="400" />
+</p>
+
+please star this repo we will make the code even better with time
+
 Copy the entire problem and press:
 
