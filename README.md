@@ -19,7 +19,7 @@ If you don’t have an API key, set it up first.
 Run `cheatercock` again. It will ask for the language.
 
 <p align="center">
-  <img src="ccreadme/2.png" width="400" />
+  <img src="ccreadme/3.png" width="400" />
 </p>
 
 ---
@@ -28,7 +28,7 @@ Run `cheatercock` again. It will ask for the language.
 Once running, you can close the app. The logic will continue running in the background.
 
 <p align="center">
-  <img src="ccreadme/3.png" width="400" />
+  <img src="ccreadme/ccrunning.png" width="400" />
 </p>
 
 ---
