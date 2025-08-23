@@ -1,4 +1,4 @@
-# CheaterCock - Setup & Usage Guide
+# CheaterCock V1.1 - Setup & Usage Guide
 
 ## 1. Download & Run
 1. Download **cheaterexec.zip** and unzip it.  
@@ -57,12 +57,8 @@ Paste the question inside the **pre-coded snippet** so the LLM can understand it
   <img src="ccreadme/5.png" width="400" />
 </p>
 
-# Now u can cheat in any coding competition just dont get caught
+# Now u can take help of llms in coding competitons too..thanks and star this repo next version coming soon
 <p align="center">
   <img src="ccreadme/6.png" width="400" />
 </p>
-
-please star this repo we will make the code even better with time
-
-Copy the entire problem and press:
 
