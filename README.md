@@ -1,13 +1,13 @@
 # CheaterCock V1.1 - Setup & Usage Guide
 
 ## 1. Download & Run
-1. Download **cheaterexec.zip** and unzip it.  
+1. Download **cheaterexe.zip** and unzip it.  
 2. Run `cheatercock`.
 
 ---
 
 ## 2. Set API Key
-If you don’t have an API key, set it up first.
+If you don’t have an API key, set it up first in Google ai studio.
 
 <p align="center">
   <img src="ccreadme/1.png" width="400" />
