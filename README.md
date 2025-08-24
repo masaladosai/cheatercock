@@ -1,4 +1,5 @@
 # CheaterCock V1.1 - Setup & Usage Guide
+prompt llms without ever going to webpages just from hotkeys
 
 ## 1. Download & Run
 1. Download **cheaterexe.zip** and unzip it.  
@@ -57,7 +58,8 @@ Paste the question inside the **pre-coded snippet** so the LLM can understand it
   <img src="ccreadme/5.png" width="400" />
 </p>
 
-# Now u can take help of llms in coding competitons too..thanks and star this repo next version coming soon
+# Now u can take help of llms in coding competitons too..thanks and star this repo
+next version with better context will be coming soon
 <p align="center">
   <img src="ccreadme/6.png" width="400" />
 </p>
