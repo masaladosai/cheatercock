@@ -52,7 +52,7 @@ Paste the question inside the **pre-coded snippet** so the LLM can understand it
 ---
 
 ## 7. Copy entire code and press ctrl+lshift+alt+k it will send problem in backend
-## 8. Press ctrl+lshift+alt+p to prompt llm with the question saved in backed...llm will response in 10-20 sec and ur response will be copied in ur clipboard paste it and take important part and use it
+## 8. Press ctrl+lshift+alt+p to prompt llm with the question saved in backend...llm will response in 10-20 sec and ur response will be copied in ur clipboard automatically, paste it and take important part and use it
 <p align="center">
   <img src="ccreadme/5.png" width="400" />
 </p>
