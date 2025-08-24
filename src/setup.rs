@@ -39,7 +39,7 @@ impl App for SetupApp {
                     }
                     2 => {
                         ui.label("✅ Setup Complete!");
-                        ui.monospace(format!("API Key: {}", self.api_key));
+                        ui.monospace(format!("API Key: {}", mask_api_key(&self.api_key)));
                         
                         if ui.button("💾 Save & Finish").clicked() {
                             let config = format!(
@@ -54,6 +54,16 @@ impl App for SetupApp {
                 }
             });
         });
+    }
+}
+
+fn mask_api_key(s: &str) -> String {
+    if s.len() <= 8 {
+        "(redacted)".to_string()
+    } else {
+        let start = &s[..4];
+        let end = &s[s.len()-4..];
+        format!("{}{}{}", start, "*".repeat(s.len().saturating_sub(8)), end)
     }
 }
 
