@@ -37,7 +37,7 @@ fn main() -> Result<()> {
         .expect("JSON was not well-formatted");
 
     let api_key = config.api_key.clone();
-    println!("Using API Key: {}\n", preview(&api_key));
+    println!("Using API Key: {}\n", mask_api_key(&api_key));
     let url = format!(
         "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key={}",
         api_key
@@ -79,17 +79,20 @@ fn main() -> Result<()> {
             if !trig.contains(&Key::KeyK) {
                 trig.insert(Key::KeyK);
                 if let Ok(mut cpb) = Clipboard::new() {
-                    if let Ok(copytext) = cpb.get_text() {
-                        let trimmed_text = copytext.trim().to_string();
-                        if !trimmed_text.is_empty() {
-                            *saved_text_copy.lock().unwrap() = Some(trimmed_text.clone());
-                            println!("saved text: {}", &trimmed_text);
-                        } else {
-                            println!("clipboard is empty");
+                        match cpb.get_text() {
+                            Ok(copytext) => {
+                                let trimmed_text = copytext.trim().to_string();
+                                if !trimmed_text.is_empty() {
+                                    *saved_text_copy.lock().unwrap() = Some(trimmed_text.clone());
+                                    println!("saved text: {}", &trimmed_text);
+                                } else {
+                                    println!("clipboard is empty");
+                                }
+                            }
+                            Err(e) => {
+                                println!("cant copy from clipboard: {:?}", e);
+                            }
                         }
-                    } else {
-                        println!("cant copy from clipboard");
-                    }
                 } else {
                     println!("clipboard not accesable");
                 }
@@ -179,5 +182,16 @@ fn preview(s: &str) -> String {
         s.to_string()
     } else {
         format!("{}…", &s[..MAX])
+    }
+}
+
+fn mask_api_key(s: &str) -> String {
+    // show first 4 and last 4 characters when long enough, otherwise mask fully
+    if s.len() <= 8 {
+        "(redacted)".to_string()
+    } else {
+        let start = &s[..4];
+        let end = &s[s.len()-4..];
+        format!("{}{}{}", start, "*".repeat(s.len().saturating_sub(8)), end)
     }
 }
